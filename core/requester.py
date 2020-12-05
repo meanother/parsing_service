@@ -49,7 +49,7 @@ def get_data_from_api(url: str, ticker: str, cursor: str) -> None:
             'instruments': ' :: '.join(instruments),
             'parse_time': parse_time,
         }
-        # print(my_data)
+        logger.info(my_data)
         insert('pulse_parser', my_data)
 
 

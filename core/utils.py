@@ -15,7 +15,7 @@ dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s [%(levelname)s] %(name)s %(funcName)s - %(message)s',
-    filename=f'{dir}/resender-service.log',
+    filename=f'{dir}/parser-service.log',
 )
 logger = logging.getLogger(__name__)
 
