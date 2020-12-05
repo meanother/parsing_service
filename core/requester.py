@@ -17,9 +17,9 @@ from .db import insert
 
 
 def get_cursor_number(url: str, ticker: str, cursor='9999999') -> Dict:
-    with requests.Session() as session:
-        logger.info(f'Get cursor number from {url.format(ticker, cursor)}')
-        data = session.get(url.format(ticker, cursor), headers=headers, stream=True)
+    session = requests.Session()
+    logger.info(f'Get cursor number from {url.format(ticker, cursor)}')
+    data = session.get(url.format(ticker, cursor), headers=headers, stream=True)
     logger.info(f"Prev cursor number is {data.json()['payload']['nextCursor']}")
     return data.json()['payload']['nextCursor']
 
