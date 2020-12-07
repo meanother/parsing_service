@@ -6,14 +6,16 @@ from datetime import datetime
 import requests
 from pytz import timezone
 
-from .utils import (
+from core.utils import (
     parse_time,
     headers,
-    logger,
+    get_logger,
     url,
     logger_time,
 )
-from .db import insert
+from core.db import insert
+
+logger = get_logger('pulse-service')
 
 
 def get_cursor_number(url: str, ticker: str, cursor='9999999') -> Dict:

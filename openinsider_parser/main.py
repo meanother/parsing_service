@@ -1,14 +1,14 @@
-from core.requester import parse
-from core.utils import logger
+from requester import parse, logger
+# from core.utils import get_logger
 
 
 def main():
     logger.info('Start script')
-    with open('tickers.txt', 'r') as file:
+    with open('../tickers.txt', 'r') as file:
         tickers = file.read().strip()
 
     for ticker in tickers.split('\n'):
-        parse(ticker, 150)
+        parse(ticker)
     logger.info('End script')
 
 
