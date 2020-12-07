@@ -7,7 +7,7 @@ git clone https://github.com/meanother/parsing_service.git; \
 cd parsing_service; \
 python3 -m venv env; \
 source env/bin/activate; \
-pip install -r req.txt; \
+pip install -r req.txt
 ```
 
 ### Run pulse parser
