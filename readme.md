@@ -12,12 +12,12 @@ pip install -r req.txt
 
 ### Run pulse parser
 ```shell script
-python pulse_parser/main.py
+python run_pulse.py
 ```
 
 ### Run openinsider parser
 ```shell script
-python openinsider_parser/main.py
+python run_openisider.py
 ```
 
 ## Log
